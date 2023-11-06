@@ -1,0 +1,21 @@
+---Languages/Frameworks used (10 points)
+10 - Learned/React frontend
+0 - MySQL Database
+
+---Functionality (60 points)
+10 - Users can click chatbot widget on the right-bottom of the page to pop up in-web openai-powered  chatbot
+15 - opened in-web openai-powered chatbot can chat with the users
+10 - Users can register, login, and logout
+5 - chatbot can remember recent conversation.
+10 - typing /feedback {user_Feedback} on the chatbox submits user_Feedback to the backend 
+10 - Database contains Users, chatlogs, and user feedback with the necessary columns and column types to maintain the above functionality
+
+---Best Practicies (5 points)
+3 Code is readable and well formatted
+2 All pages pass the html validator
+
+---Creative Portion (20 points)
+10 - able to publish and view/edit/delete articles. 
+10 - learn new framework 
+
+Approved by Pingchuan 

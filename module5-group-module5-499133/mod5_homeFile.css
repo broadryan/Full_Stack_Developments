@@ -1,0 +1,72 @@
+h1{
+    font-size:80px;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    font-family:"Garamond";
+    border:5px solid crimson
+  }
+  
+  table,th,td{
+    font-family:'Times New Roman',Times,serif;
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    border-bottom:1px solid crimson;
+    table-layout:fixed;
+    text-align:center
+  }
+
+  th{
+    background-color:crimson;
+    color:white
+  }
+
+  tr:hover{
+    background-color:coral
+  }
+  #login-label, #signup-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    color: crimson;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+
+  #calendar-navigation,
+  #calendar-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    color: #333;
+    text-shadow: 1px 1px 1px #999;
+    }
+
+  
+.selected {
+  background-color: yellow;
+}
+
+.has-event {
+  border: 2px solid blue;
+}
+
+.other-month {
+  font-style: none;
+  color: #ccc;
+  opacity: 0.5;
+}
+
+
+
+
+
+  

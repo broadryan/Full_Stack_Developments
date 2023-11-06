@@ -1,0 +1,49 @@
+h1 {
+    font-size: 80px;
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Garamond";
+    border: 5px solid crimson;
+}
+
+
+h2 {
+    font-size:20px;
+    font-family: "Garamond";
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+}
+h3 {
+    font-size:60px;
+    width:60%;
+    margin: 0 auto;
+    font-family: "Garamond";
+    text-align: center;
+
+}
+h4 {
+    font-size:60px;
+    width:60%;
+    margin: 0 auto;
+    font-family: "Garamond";
+    text-align: center;
+}
+table ,th, td {
+    font-family:'Times New Roman', Times, serif;
+    width : 70%;
+    margin-left: auto;
+    margin-right:auto;
+    border-bottom: 1px solid crimson;
+    table-layout: fixed;
+    text-align: center;
+}
+th {
+    background-color: crimson;
+    color: white;
+}
+
+
+tr:hover {background-color: coral;
+}
