@@ -1,0 +1,4 @@
+Expression: /\b\w*[aeiou]{3,}\w*\b/gi
+
+
+Test text: The gooey peanut butter and jelly sandwich was a beauty.

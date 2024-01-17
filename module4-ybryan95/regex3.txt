@@ -1,0 +1,9 @@
+regex: /^[A-Z]{2}\d{3,4}$/gm
+
+Text:
+AA312
+AA1298
+NW1234
+US443
+US31344
+AA123 extratext

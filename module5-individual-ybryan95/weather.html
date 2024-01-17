@@ -1,0 +1,60 @@
+<!--This is an HTML document with a weather widget.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Weather Widget</title>
+	<!--Linking to an external stylesheet for the weather widget-->
+	<link rel="stylesheet" type="text/css" href="https://classes.engineering.wustl.edu/cse330/content/weather.css">
+	<!--Styling the weather widget-->
+	<style>
+        .weather {
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+	<!--This is the weather widget-->
+	<div class="weather" id="weatherWidget">
+		<!--This div will show the city and state where the weather is being reported-->
+		<div class="weather-loc"></div>
+		<!--This div will show the humidity-->
+		<div class="weather-humidity"></div>
+		<!--This div will show the temperature-->
+		<div class="weather-temp"></div>
+		<!--These are images that show the weather forecast for the next two days. src and alt are filled as a placeholder to pass w3c validator-->
+		<img class="weather-tomorrow" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+		<img class="weather-dayaftertomorrow" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+	</div>
+	<!--This button will update the weather widget-->
+	<button id="updateButton">Update</button>
+	<!--This is a JavaScript script that updates the weather widget-->
+	<script>
+		//This function updates the weather widget with the data from the API
+		function updateWeatherWidget(response) {
+			document.querySelector('.weather-loc').innerHTML = `<strong>${response.location.city}</strong>, ${response.location.state}`;
+			document.querySelector('.weather-temp').innerHTML = `${response.current.temp}`;
+			document.querySelector('.weather-humidity').innerHTML = `${response.atmosphere.humidity}`;
+			document.querySelector('.weather-tomorrow').src = `http://us.yimg.com/i/us/nws/weather/gr/${response.tomorrow.code}ds.png`;
+			document.querySelector('.weather-tomorrow').alt = response.tomorrow.text;
+			document.querySelector('.weather-dayaftertomorrow').src = `http://us.yimg.com/i/us/nws/weather/gr/${response.dayafter.code}ds.png`;
+			document.querySelector('.weather-dayaftertomorrow').alt = response.dayafter.text;
+		}
+		//This function fetches the weather data from an API
+		function fetchWeather() {
+			//The URL of the API that we are fetching data from
+			const apiUrl = 'https://classes.engineering.wustl.edu/cse330/content/weather_json.php';
+			//Fetching the data from the API and updating the weather widget
+			fetch(apiUrl)
+				.then(response => response.json())
+				.then(response => updateWeatherWidget(response))
+				.catch(error => console.error(error));
+		}
+		//This event listener makes sure that the weather is fetched as soon as the page loads
+		window.addEventListener('load', fetchWeather);
+		//This event listener updates the weather when the update button is clicked
+		const updateButton = document.getElementById('updateButton');
+		updateButton.addEventListener('click', fetchWeather);
+	</script>
+</body>
+</html>

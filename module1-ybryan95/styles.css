@@ -1,0 +1,27 @@
+body {
+    background-color: #89CFF0;
+    color: purple;
+    font-size: 1.2em;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-shadow: 4px 4px #aaa;
+    font-family: "Montserrat", Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 50%; 
+    display: block;
+    margin: 0 auto; 
+    }
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+form {
+    font-size: 1.2em;
+}

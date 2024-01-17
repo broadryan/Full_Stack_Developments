@@ -1,0 +1,13 @@
+MariaDB [wustl]> SELECT s.first_name, s.last_name, s.id, g.grade
+    -> FROM students s
+    -> JOIN grades g ON s.id = g.student_id
+    -> JOIN courses c ON g.school_code = c.school_code AND g.dept_id = c.dept_id AND g.course_code = c.course_code
+    -> WHERE c.school_code = 'E' AND c.dept_id = 81 AND c.course_code = '330S';
++------------+-----------+-----+--------+
+| first_name | last_name | id  | grade  |
++------------+-----------+-----+--------+
+| Ben        | Harper    |  88 |  35.50 |
+| Matt       | Freeman   | 202 | 100.00 |
+| Marc       | Roberge   | 115 |  75.00 |
++------------+-----------+-----+--------+
+3 rows in set (0.00 sec)
